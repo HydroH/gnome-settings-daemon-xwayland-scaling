@@ -1,0 +1,6 @@
+/gnome-settings-daemon
+/libgnome-volume-control
+/src
+/pkg
+.vscode
+*.pkg.tar.zst
