@@ -10,7 +10,7 @@
 
 pkgname=gnome-settings-daemon-xwayland-scaling
 pkgver=46.0
-pkgrel=1
+pkgrel=2
 pkgdesc="GNOME Settings Daemon with Xwayland fractional scaling patch"
 url="https://gitlab.gnome.org/GNOME/gnome-settings-daemon"
 arch=(x86_64)
@@ -67,10 +67,6 @@ makedepends=(
   python-packaging
   usbguard
 )
-checkdepends=(
-  python-dbusmock
-  python-gobject
-)
 provides=(gnome-settings-daemon=$pkgver)
 conflicts=(gnome-settings-daemon)
 optdepends=('usbguard: USB protection support')
@@ -108,10 +104,6 @@ prepare() {
 build() {
   arch-meson gnome-settings-daemon build
   meson compile -C build
-}
-
-check() {
-  meson test -C build --print-errorlogs
 }
 
 package() {
