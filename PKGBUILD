@@ -10,7 +10,7 @@
 
 pkgname=gnome-settings-daemon-xwayland-scaling
 pkgver=46.0
-pkgrel=2
+pkgrel=3
 pkgdesc="GNOME Settings Daemon with Xwayland fractional scaling patch"
 url="https://gitlab.gnome.org/GNOME/gnome-settings-daemon"
 arch=(x86_64)
@@ -61,6 +61,7 @@ depends=(
 makedepends=(
   docbook-xsl
   git
+  glib2-devel
   libxslt
   meson
   python
